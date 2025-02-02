@@ -1,0 +1,496 @@
+// Variables
+$primary-blue: rgba(1, 41, 92, 1);
+$secondary-blue: rgba(16, 75, 151, 1);
+$white: rgba(255, 255, 255, 1);
+$mobile-breakpoint: 768px;
+
+$primary-bg: #f8f9fa;
+$container-bg: white;
+$option-bg: #f1f3f5;
+$hover-bg: #e9ecef;
+$cashback-bg: #d4edda;
+$cashback-text: #155724;
+
+// Mixins
+@mixin mobile {
+  @media screen and (max-width: #{$mobile-breakpoint}) {
+    @content;
+  }
+}
+
+// Header Styles
+.header {
+  &-container {
+    background-color: $primary-blue;
+    width: 100%;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 85px;
+    width: 100%;
+    overflow: hidden;
+    align-items: start;
+    padding: 18px 70px;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &-text-container {
+    position: relative;
+    display: flex;
+    gap: 35px;
+    font-family: Lato, sans-serif;
+    color: $white;
+    line-height: 1;
+    flex-wrap: wrap;
+  }
+
+  &-title {
+    font-size: 28px;
+    font-weight: 900;
+    flex-grow: 1;
+  }
+
+  &-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    flex-basis: auto;
+    flex-grow: 1;
+    margin-top: 9px;
+  }
+}
+
+.progress {
+  &-container {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &-bar {
+    border-radius: 50px;
+    background-color: $secondary-blue;
+    display: flex;
+    width: 430px;
+    max-width: 100%;
+    height: 12px;
+  }
+}
+
+.mobile-logo {
+  display: none;
+  text-align: center;
+  padding: 20px;
+
+  img {
+    max-width: 50px;
+    height: 50px;
+  }
+
+  @include mobile {
+    display: block;
+    width: 100%;
+  }
+}
+
+.desktop-content {
+  @include mobile {
+    display: none;
+  }
+}
+
+
+.section-payment-container {
+  box-shadow: 2px 2px 6px #1E1E1E;
+  width: 1093px;
+  height: 600px;
+  background-color: #EFF1FF;
+  margin: 20px 0 0 60px;
+  display: flex;
+  // padding: 20px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    
+  }
+
+  .payment-options-container {
+    background-color: #FDFDFD;
+    max-width: 400px;
+    height: 100%;
+    border: 1px solid #000000;
+    // overflow: hidden;
+
+    .payment-options-container-heading {
+      margin-bottom: 30px;
+      font-size: 18px;
+      color: #333;
+      padding: 20px;
+
+    }
+
+    .payment-option-tabs {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      // padding: 16px;
+      gap: 54px;
+      width: 400px;
+      height: 64px;
+      border-radius: 8px;
+      flex: none;
+      order: 1;
+      align-self: stretch;
+      flex-grow: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 15px;
+      transform: translateX(0);
+      background-color: transparent;
+
+      .payment-option-tabs-content {
+        // img {
+          // width: 18px;
+          // height: 25px;
+        // }
+
+        span {
+          font-size: 16px;
+          color: #0F4D73;
+        }
+      }
+
+      &:hover, &.active {
+        transform: translateX(30px);
+        background-color: #EFF1FF;
+
+        .arrow-right {
+          display: none;
+        }
+
+      }
+
+    }
+
+    .cashback-banner {
+      display: flex;
+      align-items: center;
+      background-color: #DFFFE4;
+      color: #148B32;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      height: 53px;
+      margin: 20px 0 0 26px;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
+.payment-options-details-container {
+  padding: 30px;
+
+
+  .payment-options-details {
+    margin-bottom: 20px;
+
+    .payment-options-details-header {
+      width: 624px;
+      height: 53px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .left-content {
+        .pay-to {
+          font-size: 8px;
+          color: #686868;
+          margin-bottom: 0;
+        }
+
+        .payment-options-details-header-title {
+          width: 178px;
+          color: #1C5FB5;
+          font-size: 20px;
+          // font-weight: 600;
+        }
+      }
+
+      .right-content {
+        .amount {
+          h1 {
+            color: #01295C;
+            // font-size: 28px;
+            font-weight: semi-bold;
+          }
+
+          p {
+            color: #686868;
+            font-size: 14px;
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .payment-options-details-instruction {
+      display: flex;
+      justify-content: space-around;
+      max-width: 600px;
+
+      .mobile-handy {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+        background: #FFEADE;
+        border-radius: 50px;
+        width: 172px;
+        height: 27px;
+
+        p {
+          margin-bottom: 0;
+          font-size: 12px;
+        }
+
+        img {
+          margin-right: 5px;
+        }
+
+      }
+
+      .secure {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+
+        width: 158px;
+        height: 27px;
+        background: #D4F9D6;
+        border-radius: 50px;
+
+        p {
+          font-size: 12px;
+          color: #37B24D;
+          margin-bottom: 0;
+        }
+
+      }
+    }
+
+  }
+
+  .upi-payment-details {
+    .upi-payment-details-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .scanner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .scanner-header {
+          // width: 100px;
+          // height: 23px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 130%;
+
+          color: #000000;
+        }
+
+        .scanner-para {
+          width: 112px;
+          height: 28px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 120%;
+          text-align: center;
+          color: #3D3B3B;
+        }
+      }
+
+      .divider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+
+        &__line {
+          width: 3px;
+          height: 100px;
+          background-color: #e0e0e0;
+          color: #373737;
+        }
+
+        &__text {
+          font-size: 14px;
+          color: #373737;
+          text-transform: uppercase;
+        }
+      }
+
+      .upi-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .upi-form-header {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          color: #0F4D73;
+          flex: none;
+          order: 0;
+          align-self: stretch;
+          flex-grow: 0;
+        }
+
+        .input-group-1 {
+          display: flex;
+          margin-bottom: 20px;
+
+          input {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 12px 16px;
+            gap: 8px;
+            width: 206px;
+            height: 48px;
+            border: 1px solid #C5C6CC;
+            border-radius: 10px;
+            align-self: stretch;
+            flex-grow: 0;
+            margin-right: 10px;
+          }
+
+          button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            gap: 10px;
+            width: 80px;
+            height: 48px;
+            background: #C5C6CC;
+            border-radius: 8px;
+            color: #FAFAFA;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              background: #01295C;
+            }
+          }
+
+        }
+      }
+    }
+
+    .upi-payment-details-bottom {
+      .upi-apps {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 9px;
+        width: 100%;
+        height: 52px;
+      }
+
+      .terms-condition {
+
+        width: 545px;
+        height: 14px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 140%;
+        text-align: center;
+        color: #969696;
+      }
+
+      .btn-pay {      
+        width: 552px;
+        height: 58px; 
+        background: #C5C6CC;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background: #FF681E;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+.tab-pane {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tab-pane.active {
+  display: block;
+  opacity: 1;
+}
+
+.payment-option-tabs {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-option-tabs.active {
+  background-color: #EFF1FF;
+  transform: translateX(10px);
+}
+
+
+

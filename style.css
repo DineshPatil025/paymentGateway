@@ -1,0 +1,333 @@
+.header-container {
+  background-color: #01295c;
+  width: 100%; }
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 85px;
+  width: 100%;
+  overflow: hidden;
+  align-items: start;
+  padding: 18px 70px; }
+  @media screen and (max-width: 768px) {
+    .header-content {
+      text-align: center; } }
+
+.header-text-container {
+  position: relative;
+  display: flex;
+  gap: 35px;
+  font-family: Lato, sans-serif;
+  color: white;
+  line-height: 1;
+  flex-wrap: wrap; }
+
+.header-title {
+  font-size: 28px;
+  font-weight: 900;
+  flex-grow: 1; }
+
+.header-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  flex-basis: auto;
+  flex-grow: 1;
+  margin-top: 9px; }
+
+.progress-container {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap; }
+
+.progress-bar {
+  border-radius: 50px;
+  background-color: #104b97;
+  display: flex;
+  width: 430px;
+  max-width: 100%;
+  height: 12px; }
+
+.mobile-logo {
+  display: none;
+  text-align: center;
+  padding: 20px; }
+  .mobile-logo img {
+    max-width: 50px;
+    height: 50px; }
+  @media screen and (max-width: 768px) {
+    .mobile-logo {
+      display: block;
+      width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  .desktop-content {
+    display: none; } }
+
+.section-payment-container {
+  box-shadow: 2px 2px 6px #1E1E1E;
+  width: 1093px;
+  height: 600px;
+  background-color: #EFF1FF;
+  margin: 20px 0 0 60px;
+  display: flex; }
+  @media screen and (max-width: 768px) {
+    .section-payment-container {
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto; } }
+  .section-payment-container .payment-options-container {
+    background-color: #FDFDFD;
+    max-width: 400px;
+    height: 100%;
+    border: 1px solid #000000; }
+    .section-payment-container .payment-options-container .payment-options-container-heading {
+      margin-bottom: 30px;
+      font-size: 18px;
+      color: #333;
+      padding: 20px; }
+    .section-payment-container .payment-options-container .payment-option-tabs {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 54px;
+      width: 400px;
+      height: 64px;
+      border-radius: 8px;
+      flex: none;
+      order: 1;
+      align-self: stretch;
+      flex-grow: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 15px;
+      transform: translateX(0);
+      background-color: transparent; }
+      .section-payment-container .payment-options-container .payment-option-tabs .payment-option-tabs-content span {
+        font-size: 16px;
+        color: #0F4D73; }
+      .section-payment-container .payment-options-container .payment-option-tabs:hover, .section-payment-container .payment-options-container .payment-option-tabs.active {
+        transform: translateX(30px);
+        background-color: #EFF1FF; }
+        .section-payment-container .payment-options-container .payment-option-tabs:hover .arrow-right, .section-payment-container .payment-options-container .payment-option-tabs.active .arrow-right {
+          display: none; }
+    .section-payment-container .payment-options-container .cashback-banner {
+      display: flex;
+      align-items: center;
+      background-color: #DFFFE4;
+      color: #148B32;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      height: 53px;
+      margin: 20px 0 0 26px; }
+      .section-payment-container .payment-options-container .cashback-banner .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 10px; }
+
+.payment-options-details-container {
+  padding: 30px; }
+  .payment-options-details-container .payment-options-details {
+    margin-bottom: 20px; }
+    .payment-options-details-container .payment-options-details .payment-options-details-header {
+      width: 624px;
+      height: 53px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+      .payment-options-details-container .payment-options-details .payment-options-details-header .left-content .pay-to {
+        font-size: 8px;
+        color: #686868;
+        margin-bottom: 0; }
+      .payment-options-details-container .payment-options-details .payment-options-details-header .left-content .payment-options-details-header-title {
+        width: 178px;
+        color: #1C5FB5;
+        font-size: 20px; }
+      .payment-options-details-container .payment-options-details .payment-options-details-header .right-content .amount h1 {
+        color: #01295C;
+        font-weight: semi-bold; }
+      .payment-options-details-container .payment-options-details .payment-options-details-header .right-content .amount p {
+        color: #686868;
+        font-size: 14px;
+        text-align: right; }
+    .payment-options-details-container .payment-options-details .payment-options-details-instruction {
+      display: flex;
+      justify-content: space-around;
+      max-width: 600px; }
+      .payment-options-details-container .payment-options-details .payment-options-details-instruction .mobile-handy {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+        background: #FFEADE;
+        border-radius: 50px;
+        width: 172px;
+        height: 27px; }
+        .payment-options-details-container .payment-options-details .payment-options-details-instruction .mobile-handy p {
+          margin-bottom: 0;
+          font-size: 12px; }
+        .payment-options-details-container .payment-options-details .payment-options-details-instruction .mobile-handy img {
+          margin-right: 5px; }
+      .payment-options-details-container .payment-options-details .payment-options-details-instruction .secure {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+        width: 158px;
+        height: 27px;
+        background: #D4F9D6;
+        border-radius: 50px; }
+        .payment-options-details-container .payment-options-details .payment-options-details-instruction .secure p {
+          font-size: 12px;
+          color: #37B24D;
+          margin-bottom: 0; }
+  .payment-options-details-container .upi-payment-details .upi-payment-details-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .payment-options-details-container .upi-payment-details .upi-payment-details-top .scanner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .payment-options-details-container .upi-payment-details .upi-payment-details-top .scanner .scanner-header {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        color: #000000; }
+      .payment-options-details-container .upi-payment-details .upi-payment-details-top .scanner .scanner-para {
+        width: 112px;
+        height: 28px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 120%;
+        text-align: center;
+        color: #3D3B3B; }
+    .payment-options-details-container .upi-payment-details .upi-payment-details-top .divider {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0; }
+      .payment-options-details-container .upi-payment-details .upi-payment-details-top .divider__line {
+        width: 3px;
+        height: 100px;
+        background-color: #e0e0e0;
+        color: #373737; }
+      .payment-options-details-container .upi-payment-details .upi-payment-details-top .divider__text {
+        font-size: 14px;
+        color: #373737;
+        text-transform: uppercase; }
+    .payment-options-details-container .upi-payment-details .upi-payment-details-top .upi-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .payment-options-details-container .upi-payment-details .upi-payment-details-top .upi-form .upi-form-header {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #0F4D73;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0; }
+      .payment-options-details-container .upi-payment-details .upi-payment-details-top .upi-form .input-group-1 {
+        display: flex;
+        margin-bottom: 20px; }
+        .payment-options-details-container .upi-payment-details .upi-payment-details-top .upi-form .input-group-1 input {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 12px 16px;
+          gap: 8px;
+          width: 206px;
+          height: 48px;
+          border: 1px solid #C5C6CC;
+          border-radius: 10px;
+          align-self: stretch;
+          flex-grow: 0;
+          margin-right: 10px; }
+        .payment-options-details-container .upi-payment-details .upi-payment-details-top .upi-form .input-group-1 button {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 16px;
+          gap: 10px;
+          width: 80px;
+          height: 48px;
+          background: #C5C6CC;
+          border-radius: 8px;
+          color: #FAFAFA;
+          flex: none;
+          order: 1;
+          flex-grow: 0;
+          transition: all 0.3s ease-in-out; }
+          .payment-options-details-container .upi-payment-details .upi-payment-details-top .upi-form .input-group-1 button:hover {
+            background: #01295C; }
+  .payment-options-details-container .upi-payment-details .upi-payment-details-bottom .upi-apps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 9px;
+    width: 100%;
+    height: 52px; }
+  .payment-options-details-container .upi-payment-details .upi-payment-details-bottom .terms-condition {
+    width: 545px;
+    height: 14px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 140%;
+    text-align: center;
+    color: #969696; }
+  .payment-options-details-container .upi-payment-details .upi-payment-details-bottom .btn-pay {
+    width: 552px;
+    height: 58px;
+    background: #C5C6CC;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out; }
+    .payment-options-details-container .upi-payment-details .upi-payment-details-bottom .btn-pay:hover {
+      background: #FF681E;
+      color: #fff; }
+
+.tab-pane {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; }
+
+.tab-pane.active {
+  display: block;
+  opacity: 1; }
+
+.payment-option-tabs {
+  cursor: pointer;
+  transition: all 0.3s ease; }
+
+.payment-option-tabs.active {
+  background-color: #EFF1FF;
+  transform: translateX(10px); }

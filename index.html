@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://kit.fontawesome.com/fcb76515e0.js"></script>
+    <link rel="icon" type="image/x-icon" href="/public/svg/icon-color.svg">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>PaymentGetaway</title>
+</head>
+
+<body>
+
+
+
+    <!-- header section start -->
+    <section class="section-header">
+        <header class="header-container">
+            <div class="header-content">
+                <!-- For Mobile-->
+                <div class="mobile-logo">
+                    <img src="./assets/images/mobile-logo.png" alt="Company Logo">
+                </div>
+
+                <!-- For Desktop-->
+                <div class="desktop-content">
+                    <div class="header-text-container">
+                        <h1 class="header-title">Complete Your Payment</h1>
+                        <p class="header-subtitle">Please complete your payment using the secure form below:</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                            aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                            aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+    <!-- header section End -->
+
+
+    <section class="section-payment-container">
+
+
+        <!-- payment options start -->
+        <div class="payment-options-container">
+            <h3 class="payment-options-container-heading">Select Payment Method</h3>
+
+            <!-- upi payment tab start -->
+            <div class="payment-option-tabs tab" data-tab-target="#upiPay">
+                <div class="payment-option-tabs-content">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2337b85969525ed3667395d4d47d1e7e3c1c193d64789ee8cc8a6fa98ba70898?placeholderIfAbsent=true&apiKey=e4d0cef711d04aaba06332583ddec2b2"
+                        alt="UPI Icon" class="icon">
+                    <span>UPI Payment</span>
+                </div>
+                <div>
+                    <img src="./assets/images/upi-payment-icons.png" alt="">
+                    <img class="arrow-right" src="./assets/images/CaretRight-icon.png" alt="">
+                </div>
+            </div>
+            <!-- upi payment tab end -->
+
+            <!-- card payment tab start -->
+            <div class="payment-option-tabs tab" data-tab-target="#cardPay">
+                <div class="payment-option-tabs-content">
+                    <img src="./assets/images/CreditCard.png" alt="UPI Icon" class="icon">
+
+                    <span>Debit / Credit Card</span>
+                </div>
+                <div>
+                    <img src="./assets/images/banks.png" alt="">
+                    <img class="arrow-right" src="./assets/images/CaretRight-icon.png" alt="">
+                </div>
+
+            </div>
+            <!-- card payment tab end -->
+
+            <!-- net banking payment tab start -->
+            <div class="payment-option-tabs tab" data-tab-target="#netBankingPay">
+                <div class="payment-option-tabs-content">
+                    <img src="./assets/images/bank.png" alt="UPI Icon" class="icon">
+
+                    <span>Net Banking</span>
+                </div>
+                <div>
+                    <img src="./assets/images/netbanking-icons.png" alt="">
+                    <img class="arrow-right" src="./assets/images/CaretRight-icon.png" alt="">
+                </div>
+
+
+            </div>
+            <!-- net banking payment tab end -->
+
+            <div class="cashback-banner">
+                <div class="icon">
+                    <img src="./assets/images/security.png" alt="">
+                </div>
+                <span>100% extra Cashback on Axis Bank.</span>
+            </div>
+
+        </div>
+        <!-- payment options end -->
+
+        <!-- payment options details start -->
+        <div class="payment-options-details-container">
+            
+
+            <!-- UPI PAYMENT DETAILS START -->
+            <div class="upi-payment-details tab-pane active" id="upiPay">
+
+                <div class="payment-options-details">
+                    <div class="payment-options-details-header">
+                        <div class="left-content">
+                            <p class="pay-to">You’re Paying to </p>
+                            <h1 class="payment-options-details-header-title">Indionnect Paytech Pvt Ltd.</h1>
+                        </div>
+                        <div class="right-content">
+                            <div class="amount">
+                                <h1 class="mb-0">₹ 901.38</h1>
+                                <p class="mb-0">Amount Payable</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-options-details-instruction">
+                        <div class="mobile-handy">
+                            <img src="./assets/images/mobile-handy.png" alt="">
+                            <p>Keep your mobile handy!</p>
+                        </div>
+                        <div class="secure">
+                            <img src="./assets/images/secure1.png" alt="">
+                            <p>100% Safe & Secure</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upi-payment-details-top">
+                    <div class="scanner">
+                        <h1 class="scanner-header">Scan & pay</h1>
+                        <img src="./assets/images/scanner.png" alt="">
+                        <p class="scanner-para">Scan and pay using any banking app</p>
+                    </div>
+                    <div class="divider">
+                        <div class="divider__line"></div>
+                        <span class="divider__text">OR</span>
+                        <div class="divider__line"></div>
+                    </div>
+                    <div class="upi-form">
+                        <h1 class="upi-form-header">Enter UPI ID</h1>
+                        <div class="input-group-1">
+                            <input type="text" placeholder="UPIID">
+                            <button>Verify</button>
+                        </div>
+                        <ul>
+                            <li>Enter your registered VPA</li>
+                            <li>Receive payment request on bank app</li>
+                            <li>Authorize payment request</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="upi-payment-details-bottom">
+                    <div class="upi-apps">
+                        <img src="./assets/images/gpay.png" alt="">
+                        <img src="./assets/images/Paytm.png" alt="">
+                        <img src="./assets/images/Phonepe.png" alt="">
+                        <img src="./assets/images/Amazonpay.png" alt="">
+                    </div>
+                    <p class="terms-condition">By continuing to pay, I understand and agree with the privacy policy, the
+                        user agreement and terms of service of</p>
+                    <button class="btn-pay">Pay ₹ 901.38 </button>
+                </div>
+            </div>
+            <!-- UPI PAYMENT DETAILS END -->
+
+            <!-- CARD PAYMENT DETAILS START -->
+            <div class="upi-payment-details tab-pane" id="cardPay">
+
+                <div class="payment-options-details">
+                    <div class="payment-options-details-header">
+                        <div class="left-content">
+                            <p class="pay-to">You’re Paying to </p>
+                            <h1 class="payment-options-details-header-title">Indionnect Paytech Pvt Ltd.</h1>
+                        </div>
+                        <div class="right-content">
+                            <div class="amount">
+                                <h1 class="mb-0">₹ 901.38</h1>
+                                <p class="mb-0">Amount Payable</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-options-details-instruction">
+                        <div class="mobile-handy">
+                            <img src="./assets/images/mobile-handy.png" alt="">
+                            <p>Keep your mobile handy!</p>
+                        </div>
+                        <div class="secure">
+                            <img src="./assets/images/secure1.png" alt="">
+                            <p>100% Safe & Secure</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upi-payment-details-top">
+                    <div class="scanner">
+                        <h1 class="scanner-header">cards pay</h1>
+                        <img src="./assets/images/scanner.png" alt="">
+                        <p class="scanner-para">Scan and pay using any banking app</p>
+                    </div>
+                    <div class="divider">
+                        <div class="divider__line"></div>
+                        <span class="divider__text">OR</span>
+                        <div class="divider__line"></div>
+                    </div>
+                    <div class="upi-form">
+                        <h1 class="upi-form-header">Enter UPI ID</h1>
+                        <div class="input-group-1">
+                            <input type="text" placeholder="UPIID">
+                            <button>Verify</button>
+                        </div>
+                        <ul>
+                            <li>Enter your registered VPA</li>
+                            <li>Receive payment request on bank app</li>
+                            <li>Authorize payment request</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="upi-payment-details-bottom">
+                    <div class="upi-apps">
+                        <img src="./assets/images/gpay.png" alt="">
+                        <img src="./assets/images/Paytm.png" alt="">
+                        <img src="./assets/images/Phonepe.png" alt="">
+                        <img src="./assets/images/Amazonpay.png" alt="">
+                    </div>
+                    <p class="terms-condition">By continuing to pay, I understand and agree with the privacy policy, the
+                        user agreement and terms of service of</p>
+                    <button class="btn-pay">Pay ₹ 901.38 </button>
+                </div>
+            </div>
+            <!-- CARD PAYMENT DETAILS END -->
+
+            <!-- NET BANKING DETAILS START -->
+            <div class="upi-payment-details tab-pane" id="netBankingPay">
+                <div class="payment-options-details">
+                    <div class="payment-options-details-header">
+                        <div class="left-content">
+                            <p class="pay-to">You’re Paying to </p>
+                            <h1 class="payment-options-details-header-title">Indionnect Paytech Pvt Ltd.</h1>
+                        </div>
+                        <div class="right-content">
+                            <div class="amount">
+                                <h1 class="mb-0">₹ 901.38</h1>
+                                <p class="mb-0">Amount Payable</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-options-details-instruction">
+                        <div class="mobile-handy">
+                            <img src="./assets/images/mobile-handy.png" alt="">
+                            <p>Keep your mobile handy!</p>
+                        </div>
+                        <div class="secure">
+                            <img src="./assets/images/secure1.png" alt="">
+                            <p>100% Safe & Secure</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="upi-payment-details-top">
+                    <div class="scanner">
+                        <h1 class="scanner-header">Net Banking Pay</h1>
+                        <img src="./assets/images/scanner.png" alt="">
+                        <p class="scanner-para">Scan and pay using any banking app</p>
+                    </div>
+                    <div class="divider">
+                        <div class="divider__line"></div>
+                        <span class="divider__text">OR</span>
+                        <div class="divider__line"></div>
+                    </div>
+                    <div class="upi-form">
+                        <h1 class="upi-form-header">Enter UPI ID</h1>
+                        <div class="input-group-1">
+                            <input type="text" placeholder="UPIID">
+                            <button>Verify</button>
+                        </div>
+                        <ul>
+                            <li>Enter your registered VPA</li>
+                            <li>Receive payment request on bank app</li>
+                            <li>Authorize payment request</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="upi-payment-details-bottom">
+                    <div class="upi-apps">
+                        <img src="./assets/images/gpay.png" alt="">
+                        <img src="./assets/images/Paytm.png" alt="">
+                        <img src="./assets/images/Phonepe.png" alt="">
+                        <img src="./assets/images/Amazonpay.png" alt="">
+                    </div>
+                    <p class="terms-condition">By continuing to pay, I understand and agree with the privacy policy, the
+                        user agreement and terms of service of</p>
+                    <button class="btn-pay">Pay ₹ 901.38 </button>
+                </div>
+            </div>
+            <!-- NET BANKING PAYMENT DETAILS END -->
+
+
+
+            <!-- payment options details end -->
+        </div>
+    </section>
+
+
+
+
+    <!-- <script src="app.js"></script> -->
+    <script src="app1.js"></script>
+</body>
+
+</html>
