@@ -112,6 +112,9 @@
       .section-payment-container .payment-options-container .payment-option-tabs:hover, .section-payment-container .payment-options-container .payment-option-tabs.active {
         transform: translateX(30px);
         background-color: #EFF1FF; }
+        @media screen and (max-width: 768px) {
+          .section-payment-container .payment-options-container .payment-option-tabs:hover, .section-payment-container .payment-options-container .payment-option-tabs.active {
+            transform: translateX(0); } }
         .section-payment-container .payment-options-container .payment-option-tabs:hover .arrow-right, .section-payment-container .payment-options-container .payment-option-tabs.active .arrow-right {
           display: none; }
     .section-payment-container .payment-options-container .cashback-banner {

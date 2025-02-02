@@ -171,6 +171,10 @@ $cashback-text: #155724;
       &:hover, &.active {
         transform: translateX(30px);
         background-color: #EFF1FF;
+        @media screen and (max-width: 768px) {
+          transform: translateX(0);
+          
+        }
 
         .arrow-right {
           display: none;
