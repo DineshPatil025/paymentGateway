@@ -10,29 +10,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetPane = document.querySelector(targetId);
 
         if (isMobile()) {
-            // Close other open panes
-            tabPanes.forEach(pane => {
-                if (pane !== targetPane && pane.classList.contains('active')) {
-                    pane.classList.remove('active');
-                    const associatedTab = document.querySelector(`[data-tab-target="#${pane.id}"]`);
-                    associatedTab.classList.remove('active');
-                }
-            });
-
-            // Toggle clicked pane
-            if (targetPane.classList.contains('active')) {
-                targetPane.classList.remove('active');
+            if (tab.classList.contains('active')) {
+                // Deactivate tab and remove wrapper
                 tab.classList.remove('active');
+                targetPane.classList.remove('active');
+                const wrapper = targetPane.closest('.payment-options-details-container');
+                if (wrapper && wrapper !== detailsContainer) {
+                    detailsContainer.appendChild(targetPane);
+                    wrapper.remove();
+                }
             } else {
-                targetPane.classList.add('active');
+                // Close other active tabs and remove their wrappers
+                tabs.forEach(t => {
+                    if (t.classList.contains('active')) {
+                        t.classList.remove('active');
+                        const pane = document.querySelector(t.dataset.tabTarget);
+                        pane.classList.remove('active');
+                        const wrapper = pane.closest('.payment-options-details-container');
+                        if (wrapper && wrapper !== detailsContainer) {
+                            detailsContainer.appendChild(pane);
+                            wrapper.remove();
+                        }
+                    }
+                });
+
+                // Activate clicked tab
                 tab.classList.add('active');
+                targetPane.classList.add('active');
                 
-                // Create wrapper with original container class
+                // Create new wrapper
                 const wrapper = document.createElement('div');
                 wrapper.className = 'payment-options-details-container';
                 wrapper.appendChild(targetPane);
-                
-                // Insert after tab
                 tab.insertAdjacentElement('afterend', wrapper);
             }
         } else {
@@ -40,7 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tabs.forEach(t => t.classList.remove('active'));
             tabPanes.forEach(p => {
                 p.classList.remove('active');
-                detailsContainer.appendChild(p);
+                if (p.parentElement !== detailsContainer) {
+                    detailsContainer.appendChild(p);
+                }
             });
             
             tab.classList.add('active');
@@ -48,22 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Initialize UPI tab as active
+    // Initialize UPI tab
     const upiTab = document.querySelector('[data-tab-target="#upiPay"]');
-    if (upiTab) {
-        handleTabClick(upiTab);
-    }
+    if (upiTab) handleTabClick(upiTab);
 
-    // Add click handlers
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => handleTabClick(tab));
-    });
-
+    // Event listeners
+    tabs.forEach(tab => tab.addEventListener('click', () => handleTabClick(tab)));
+    
     // Handle resize
     window.addEventListener('resize', () => {
         if (!isMobile()) {
             tabPanes.forEach(pane => {
-                detailsContainer.appendChild(pane);
+                const wrapper = pane.closest('.payment-options-details-container');
+                if (wrapper && wrapper !== detailsContainer) {
+                    detailsContainer.appendChild(pane);
+                    wrapper.remove();
+                }
             });
         }
     });

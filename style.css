@@ -110,7 +110,6 @@
         font-size: 16px;
         color: #0F4D73; }
       .section-payment-container .payment-options-container .payment-option-tabs:hover, .section-payment-container .payment-options-container .payment-option-tabs.active {
-        transform: translateX(30px);
         background-color: #EFF1FF; }
         @media screen and (max-width: 768px) {
           .section-payment-container .payment-options-container .payment-option-tabs:hover, .section-payment-container .payment-options-container .payment-option-tabs.active {
